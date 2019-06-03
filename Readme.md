@@ -4,7 +4,7 @@ settings:
 create an rsa key pair by using command line keygen
 copy and paste the file id_rsa.pub which contein the public key under .ssh in the file authorized_keys.
 sign in scaleway and paste the public key under credentials in the key section
-connect to the instance by using ssh root@51.15.121.199
+connect to the instance by using ssh root@51.15.121.199 and open a new terminal for what is following
 
 
 once conected to the instance:
