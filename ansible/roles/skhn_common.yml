@@ -1,0 +1,15 @@
+---
+ - hosts: webserver
+   user: sonny
+
+
+   tasks:
+   - name: install some tools
+     apt:
+       update_cache=yes
+       state=latest
+       name={{item}}
+     with_items:
+     - loraserver
+     - lora-app-server
+     - lora-gateway-bridge
