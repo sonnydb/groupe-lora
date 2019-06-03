@@ -16,4 +16,5 @@ In this case the file is skhn_common.yml
 then use the following command line to execute the file .yml and make the download of packets on the server.
 the command is: ansible-playbook -i hosts /etc/ansible/roles/skhn_common.yml
 Packets should be downloaded.
-P.S: in my case after having done the ping i add to give rights to all users by going in /etc/ansible and doing chmod 777 hosts
+P.S: in my case after having done the ping i add to give rights to all users by going in /etc/ansible and doing chmod 777 hosts,
+i also had to add this to the file because of my python version which wasn't the good one.
