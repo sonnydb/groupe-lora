@@ -1,0 +1,34 @@
+
+{
+  "variables":{
+    "api_access_key":"",
+    "api_token":""
+},
+ "builders": [
+   {
+     "api_acces_key": "{{ user 'api_access_key' }}",
+     "api_token": "{{ user 'api_token' }}",
+     "server_name": "apache",
+     "image_name": "ubuntu-apache",
+     "snapshot_name": "ubuntu-apache-snapshot",
+     "type": "scaleway",
+     "image":"27452e61-310e-4fe5-93af-0a0bdf4c20a6",
+     "region": "par1",
+     "commercial_type": "START1-S",
+     "ssh_private_key_file": "/users/myaccount.ssh/id_rsa",
+     "ssh_username": "root"
+   }
+  ],
+  "provisioners": [
+   {
+     "type":"shell",
+     "inline": [
+         "sleep 30",
+         "apt-get update",
+         "apt-get -y upgrade",
+         "apt-get install -y apache2"
+        ]
+     }
+  ]
+
+}
