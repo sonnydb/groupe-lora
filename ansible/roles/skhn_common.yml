@@ -10,6 +10,6 @@
        state=latest
        name={{item}}
      with_items:
-     - loraserver
-     - lora-app-server
-     - lora-gateway-bridge
+     - git
+     - sudo
+     - wget
